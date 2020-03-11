@@ -82,8 +82,8 @@
 
     <div class="col">
       <label><b>Kilometers</b></label>
-      <div>
-        {{ miles | convMileToKM: 'm' }}
+      <div *ngIf="(miles | convMileToKM: 'km') > 10">
+        {{ miles | convMileToKM: 'km' }}
       </div>
     </div>
   </div>
